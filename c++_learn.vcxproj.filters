@@ -18,5 +18,13 @@
     <ClCompile Include="c++_learn.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="laptop.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="laptop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
