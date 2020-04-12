@@ -147,11 +147,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Extern.cpp" />
     <ClCompile Include="c++_learn.cpp" />
-    <ClCompile Include="laptop.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="laptop.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
