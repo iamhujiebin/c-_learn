@@ -1,57 +1,77 @@
 ﻿#include <iostream>
+#include "Class.h"
+#include "Vitual.h"
+#include "Stack.h"
 
 using namespace std;
 
 int main();
-
-void func(void);
-static int global = 10;//全局变量
 int exte = 1000101010;
 extern void printExtern(void);
 extern int findMax(int, int = 199);
+extern void printRand();
+extern void temp();
+extern void cstring();
+extern void nstring();
+extern void charPtr();
+extern void ref();
+extern void testTime();
+extern void output();
+extern void TestStruct();
+extern void tryThrowCatch(int, int);
 
 int main()
 {
-	cout << "c++是中级的编程语言，可以稍微直接地操控计算机硬件，例如寄存器，声卡，显卡等" << endl;
-	auto f = 3.14;
-	auto s("hello");
-	auto z = new auto(9);
-	cout << f << s << z << "auto 关键词相当于var" << endl;
-	register int reg;
-	reg = 100;
-	cout << reg << "存储在寄存器中，因此没有内存位置的，区别于RAM（有内存空间，堆）" << endl;
-	cout << "static 关键字就理解为全局变量的声明就好 " << endl;
-	printExtern();
-	thread_local string tl = "thread local variable";
-	cout << "thread_local变量仅可在它在其上创建的线程上访问,变量在创建线程时创建，并在销毁线程时销毁" << tl << endl;
-	while (global > 0)
+	//temp();
+	//printExtern();
+	//auto max = findMax(135);
+	//cout << max << endl;
+	/*printRand();
+	cstring();
+	nstring();
+	charPtr();
+	ref();*/
+	//testTime();
+	//output();
+	//TestStruct();
+	/*Mohang m("mohang", 10);
+	m.setIncome(10000.12);
+	m.setAddress("payu");
+	cout << m.getSalary() << ":" << m.getIncome() << endl;
+	printCompanyName(m);
+	Mohang m2(10);
+	cout << "totalCompany:" << Company::getTotalCompany() << endl;*/
+	/*Shape* s;
+	Rectangle r(1, 2);
+	Triangle t(2, 3);
+	s = &r;
+	cout << s->area() << endl;
+	s = &t;
+	cout << s->area() << endl;
+	try
 	{
-		global--;
-		func();
+		tryThrowCatch(1,1);
 	}
-	do {
-		cout << "do while 多做一次do " << endl;
-	} while (global > 0);
-	char grade = 'D';
-	switch (grade)
+	catch (const char* msg)
 	{
-	case 'D':
-		cout << "很差" << endl;
-		break;
-	case 'A':
-		cout << "很good" << endl;
-	default:
-		break;
-	}
-	cout << "findMax:" << findMax(135) << endl;
-	auto aFunc = [](int x, int y)-> int { return x + y; };
-	cout << "lambda:匿名函数" << aFunc(32, 11) << endl;
-}
+		cerr << msg << endl;
+	}*/
+	try {
+		Stack<int>         intStack;  // int 类型的栈 
+		Stack<string> stringStack;    // string 类型的栈 
 
-void func(void)
-{
-	static int i = 5;
-	i++;
-	cout << "i:" << i << endl;
-	cout << "global:" << global << endl;
+		// 操作 int 类型的栈 
+		intStack.push(7);
+		cout << intStack.top() << endl;
+
+		// 操作 string 类型的栈 
+		stringStack.push("hello");
+		cout << stringStack.top() << std::endl;
+		stringStack.pop();
+		stringStack.pop();
+	}
+	catch (exception const& ex) {
+		cerr << "Exception: " << ex.what() << endl;
+		return -1;
+	}
 }

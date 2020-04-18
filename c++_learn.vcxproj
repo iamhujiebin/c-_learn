@@ -147,8 +147,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Class.cpp" />
     <ClCompile Include="Extern.cpp" />
     <ClCompile Include="c++_learn.cpp" />
+    <ClCompile Include="Stack.cpp" />
+    <ClCompile Include="Time.cpp" />
+    <ClCompile Include="Struct.cpp" />
+    <ClCompile Include="Vitual.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Class.h" />
+    <ClInclude Include="Stack.h" />
+    <ClInclude Include="Vitual.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
